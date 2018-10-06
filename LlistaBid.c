@@ -20,7 +20,24 @@ LlistaBid LLISTABID_crea(){
       l.pri -> seg = l.ult;
       l.ult -> seg = NULL;
       l.ult -> ant = l.pri;
+
+      l.pri -> num = ELEMENT_INDEFINIT;
+      l.ult -> num = ELEMENT_INDEFINIT;
     } //else
   } //else
   return l;
+}
+
+//
+Function that direct the pointer pdi to the begining of the list
+//
+int LLISTABID_inici(LlistaBid l){
+  l->pdi = l->pri->seg;
+}
+
+//
+Function that direct the pointer pdi to the end of the list
+//
+int LLISTABID_fi (LlistaBid l){
+	return l.pdi == l.ult;
 }

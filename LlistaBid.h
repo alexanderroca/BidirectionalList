@@ -18,6 +18,10 @@ typedef struct{
   Node *pdi;
 }LlistaBid;
 
-LlistaBid LLISTABID_crea();
+LlistaBid LLISTABID_crea(); //TODO: test
+int LLISTABID_inici(LlistaBid l); //TODO: test
+int LLISTABID_fi (LlistaBid l); //TODO: test
+
+
 
 #endif
