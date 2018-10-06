@@ -21,7 +21,7 @@ typedef struct{
 LlistaBid LLISTABID_crea(); //TODO: test
 int LLISTABID_inici(LlistaBid l); //TODO: test
 int LLISTABID_fi (LlistaBid l); //TODO: test
-
-
+int LLISTABID_esBuida (LlistaBid l);  //TODO: test
+//void LLISTABID_destrueix(LlistaBid *l); //TODO: test
 
 #endif

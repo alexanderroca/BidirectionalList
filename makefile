@@ -1,13 +1,16 @@
-all: bidireccional_list
+all: llista_bid
 
 main.o: main.c LlistaBid.h
-		gcc main.c -c -Wall -Wextra
+	gcc main.c -c -Wall -Wextra
 
 LlistaBid.o: LlistaBid.c LlistaBid.h
-		gcc LlistaBid.c -c -Wall -Wextra
+	gcc LlistaBid.c -c -Wall -Wextra
 
-P3: main.o LlistaBid.o
-		gcc main.o LlistaBid.o -o bidireccional_list.exe -Wall -Wextra
+llista_bid: main.o LlistaBid.o
+	gcc main.o LlistaBid.o -o llista_bid.exe -Wall -Wextra
 
 clean:
-	rm *.o bidireccional_list.exe
+	rm *.o llista_bid.exe
+
+tar:
+	tar -cvzf llista_bid.tar.gz *.c *.h makefile
