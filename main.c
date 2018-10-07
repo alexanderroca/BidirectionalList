@@ -96,14 +96,6 @@ int main(){
   printf("We will delete the entire list\n");
   LLISTABID_destrueix(&list);
 
-<<<<<<< HEAD
-  if(!LLISTABID_esBuida (list)){
-    printf("Error, list is not destroyed\n");
-    return 1;
-  } //if
-
-=======
->>>>>>> ae8c736e1ddabb8a17feeed65eeb5d1005b1165d
   printf("\nAll OK\n");
 	return 0;
 }
