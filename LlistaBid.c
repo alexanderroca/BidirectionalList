@@ -16,8 +16,9 @@ LlistaBid LLISTABID_crea(){
       free(l.pri);
     } //if
     else{
-      l.pdi = l.pri;
+      l.pdi = l.ult;
       l.pri -> seg = l.ult;
+      l.pri -> ant = NULL;
       l.ult -> seg = NULL;
       l.ult -> ant = l.pri;
 
@@ -39,7 +40,7 @@ int LLISTABID_inici(LlistaBid l){
 Function that show if the pointer pdi is in the end of the list
 */
 int LLISTABID_fi (LlistaBid l){
-	return l.pdi == l.ult->ant;
+	return l.pdi == l.ult;
 }
 
 /*
@@ -105,18 +106,26 @@ void LLISTABID_insereixOrdenat(LlistaBid *l, int num){
 Procedure that adds an element to the right of the PDI
 */
 void LLISTABID_inserir (LlistaBid* l, int num){
-	Node* aux = NULL;
-	if(l -> pdi -> seg != NULL){
-		aux= (Node*) malloc (sizeof (Node));
-		if(aux != NULL){
-			aux -> num = num;
-			aux -> ant = l -> pdi;
-			aux -> seg = l -> pdi -> seg;
-			l -> pdi -> seg -> ant = aux;
-			l -> pdi -> seg = aux;
+	Node* aux;
+
+  if(l->pdi == l->pri){
+    //deal with error
+    printf("ERROR\n");
+  } //if
+  else{
+    aux= (Node*) malloc (sizeof (Node));
+    if(aux == NULL){
+      //deal with error
+    } //if
+    else{
+  		aux -> num = num;
+  		aux -> seg = l -> pdi;
+      aux -> ant = l -> pdi -> ant;
+			l -> pdi -> ant = aux;
+			aux -> ant -> seg = aux;
 			l -> pdi = aux;
-		}
-	}
+      } //else
+  } //else
 }
 
 

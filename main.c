@@ -24,7 +24,7 @@ int main(){
   } //if
 
   LLISTABID_vesFinal (&list);
-  if(LLISTABID_fi (list)){
+  if(list.pdi->seg->num == list.ult->num){
     printf("PDI is in the last node\n");
   } //if
   else{
