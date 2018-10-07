@@ -47,7 +47,7 @@ int LLISTABID_fi (LlistaBid l){
 Function that returns '1' if the first node points to the last one (it means that the list is empty) and '0' is the opposite case
 */
 int LLISTABID_esBuida (LlistaBid l){
-	return l.pri -> seg == l.ult;
+	return l.ult->ant == l.pri;
 }
 
 /*
@@ -162,12 +162,12 @@ void LLISTABID_esborra (LlistaBid* l){
 Procedure that destroy the entire list leaving the PDI null
 */
 void LLISTABID_destrueix(LlistaBid *l){
-	LLISTABID_vesInici(l);
-	while (!LLISTABID_esBuida(*l)){
-		LLISTABID_esborra(l);
+	Node *aux;
+	while (l->pri != NULL){
+		aux = l->pri;
+    l->pri = l->pri->seg;
+    free(aux);
 	}
-	free(l -> pri);
-	free(l -> ult);
 	l -> pdi = NULL;
 	l -> ult = NULL;
 }

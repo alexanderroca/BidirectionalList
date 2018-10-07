@@ -83,6 +83,19 @@ int main(){
     LLISTABID_retrocedeix(&list);
   } //while
 
+  printf("We will delete an item from the list\n");
+  LLISTABID_avanca (&list);
+  LLISTABID_esborra (&list);
+  printf("We show all the inserted elements from the first node until the last to check the deleted item\n");
+  LLISTABID_vesInici(&list);
+  while(list.pdi -> num != -1){
+    printf("%d\n", LLISTABID_consulta (list));
+    LLISTABID_avanca (&list);
+  } //while
+
+  printf("We will delete the entire list\n");
+  LLISTABID_destrueix(&list);
+
   printf("\nAll OK\n");
 	return 0;
 }

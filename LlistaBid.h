@@ -23,13 +23,13 @@ int LLISTABID_inici(LlistaBid l);
 int LLISTABID_fi (LlistaBid l);
 int LLISTABID_esBuida (LlistaBid l);
 void LLISTABID_vesInici (LlistaBid* l);
-void LLISTABID_vesFinal (LlistaBid* l);            
-void LLISTABID_avanca (LlistaBid* l);                   //TODO: test
-void LLISTABID_retrocedeix(LlistaBid *l);               //TODO: test
-void LLISTABID_inserir (LlistaBid* l, int num);         //TODO: test
-void LLISTABID_insereixOrdenat(LlistaBid *l, int num);  //TODO: test
-int LLISTABID_consulta (LlistaBid l);                   //TODO: test
-void LLISTABID_esborra (LlistaBid* l);                  //TODO: test
-void LLISTABID_destrueix(LlistaBid *l);                 //TODO: test
+void LLISTABID_vesFinal (LlistaBid* l);
+void LLISTABID_avanca (LlistaBid* l);
+void LLISTABID_retrocedeix(LlistaBid *l);
+void LLISTABID_inserir (LlistaBid* l, int num);
+void LLISTABID_insereixOrdenat(LlistaBid *l, int num);
+int LLISTABID_consulta (LlistaBid l);
+void LLISTABID_esborra (LlistaBid* l);
+void LLISTABID_destrueix(LlistaBid *l);                 
 
 #endif
