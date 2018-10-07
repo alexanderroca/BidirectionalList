@@ -83,14 +83,14 @@ void LLISTABID_retrocedeix(LlistaBid *l){
 }
 
 /*
-
+Procedure that selects the position where to insert the new element
 */
 void LLISTABID_insereixOrdenat(LlistaBid *l, int num){
   int trobat = 0;
 
   LLISTABID_vesInici(l);
   while(!trobat){
-    if(l->pdi){
+    if(l->pdi->num > num){
 
         LLISTABID_avanca (l);
     } //if

@@ -49,6 +49,40 @@ int main(){
     return 1;
   } //else
 
+  printf("Attempt to insert number 2\n");
+  LLISTABID_insereixOrdenat (&list, 2);
+  printf("Check the node inserted\n");
+  if(LLISTABID_consulta (list) == 2){
+    printf("The query was successful\n");
+  } //if
+  else{
+    return 1;
+  } //else
+
+  printf("Attempt to insert number 8\n");
+  LLISTABID_insereixOrdenat (&list, 8);
+  printf("Check the node inserted\n");
+  if(LLISTABID_consulta (list) == 8){
+    printf("The query was successful\n");
+  } //if
+  else{
+    return 1;
+  } //else
+
+  printf("We show all the inserted elements from the first node until the last\n");
+  LLISTABID_vesInici(&list);
+  while(list.pdi -> num != -1){
+    printf("%d\n", LLISTABID_consulta (list));
+    LLISTABID_avanca (&list);
+  } //while
+
+  printf("We show all the inserted elements from the last node until the first\n");
+  LLISTABID_vesFinal(&list);
+  while(list.pdi -> num != -1){
+    printf("%d\n", LLISTABID_consulta (list));
+    LLISTABID_retrocedeix(&list);
+  } //while
+
   printf("\nAll OK\n");
 	return 0;
 }
