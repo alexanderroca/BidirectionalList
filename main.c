@@ -23,6 +23,32 @@ int main(){
     return 1;
   } //if
 
+  LLISTABID_vesFinal (&list);
+  if(LLISTABID_fi (list)){
+    printf("PDI is in the last node\n");
+  } //if
+  else{
+    return 1;
+  } //else
 
+  LLISTABID_vesInici (&list);
+  if(LLISTABID_inici(list)){
+    printf("PDI is in the first node\n");
+  } //if
+  else{
+    return 1;
+  } //else
+
+  printf("Attempt to insert number 5\n");
+  LLISTABID_inserir (&list, 5);
+  printf("Check the node inserted\n");
+  if(LLISTABID_consulta (list) == 5){
+    printf("The query was successful\n");
+  } //if
+  else{
+    return 1;
+  } //else
+
+  printf("\nAll OK\n");
 	return 0;
 }

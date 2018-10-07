@@ -39,7 +39,7 @@ int LLISTABID_inici(LlistaBid l){
 Function that show if the pointer pdi is in the end of the list
 */
 int LLISTABID_fi (LlistaBid l){
-	return l.pdi == l.ult;
+	return l.pdi == l.ult->ant;
 }
 
 /*
