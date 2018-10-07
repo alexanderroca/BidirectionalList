@@ -28,8 +28,14 @@ void LLISTABID_avanca (LlistaBid* l);
 void LLISTABID_retrocedeix(LlistaBid *l);
 void LLISTABID_inserir (LlistaBid* l, int num);
 void LLISTABID_insereixOrdenat(LlistaBid *l, int num);
+<<<<<<< HEAD
 int LLISTABID_consulta (LlistaBid l);                   
 void LLISTABID_esborra (LlistaBid* l);                  //TODO: test
 void LLISTABID_destrueix(LlistaBid *l);                 //TODO: test
+=======
+int LLISTABID_consulta (LlistaBid l);
+void LLISTABID_esborra (LlistaBid* l);
+void LLISTABID_destrueix(LlistaBid *l);                 
+>>>>>>> ae8c736e1ddabb8a17feeed65eeb5d1005b1165d
 
 #endif
